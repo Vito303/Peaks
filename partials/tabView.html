@@ -1,0 +1,18 @@
+<div class="panel panel-default">
+  	<div class="panel-heading">
+  		<p>Išči: <input type="text" ng-model="search"></p>
+  	</div>
+    <div class="panel-body">
+			<table class="table">
+				<td></td>
+				<td>IME VRHA</td>
+				<td>VIŠINA</td>
+				<tr ng-repeat="v in dataSet | filter:search">
+					<td>{{v.id}}</td>
+					<td><a ng-href="{{v.link}}" target="_blank">{{v.name}}</a></td>
+					<td><div style="min-width: 70px">{{v.height}} m</div></td>
+				</tr>
+			</table>
+		</div>  
+	</div>
+</div>

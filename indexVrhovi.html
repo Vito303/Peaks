@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myapp">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="VitoDesign &amp; 2013" />
+    <meta name="description" content="Peaks location" />
+    <title>Vrhovi</title>
+
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <!--<link rel="stylesheet" type="text/css" href="css/table.css">-->
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script> 
+    <script type="text/javascript" src="js/jquery.min.js"></script>  
+    <script type="text/javascript" src="js/jquery.gomap-1.3.2.min.js"></script> 
+    <script type="text/javascript" src="js/map.js"></script>
+
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    
+    <script type="text/javascript" src="js/angular.js"></script>
+    <!--<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.4/angular.min.js"></script>-->
+    <script type="text/javascript" src="js/xml2json.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    
+    <!-- Include the plugin's CSS and JS: -->
+    <script type="text/javascript" src="js/bootstrap-multiselect.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-multiselect.css"/>    
+</head>
+
+<body>
+  <nav class="navbar navbar-default" role="navigation" ng-controller="initPageCtrl">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="">{{ Page.title() }}</a>
+      </div>      
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#/"> Doma</a></li>
+        <li><a href="#/tabView"> Iskanje</a></li>
+        <li><a href="#/mapView"> Zemljevid</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div id="main">
+    <div ng-view></div>
+  </div>
+  
+  <footer class="text-center">
+    <a href="http://google.com">VitoDesign</a> &amp; 2013
+  </footer>
+  
+</body>
+</html>
